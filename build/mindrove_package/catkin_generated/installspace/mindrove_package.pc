@@ -1,0 +1,8 @@
+prefix=/home/pal/wearable/install
+
+Name: mindrove_package
+Description: Description of mindrove_package
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
