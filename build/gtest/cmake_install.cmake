@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/pal/wearable/install")
+  set(CMAKE_INSTALL_PREFIX "/home/student/wearable_robot_control/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/pal/wearable/build/gtest/googlemock/cmake_install.cmake")
+  include("/home/student/wearable_robot_control/build/gtest/googlemock/cmake_install.cmake")
 
 endif()
 

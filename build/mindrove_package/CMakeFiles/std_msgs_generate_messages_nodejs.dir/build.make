@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pal/wearable/src
+CMAKE_SOURCE_DIR = /home/student/wearable_robot_control/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pal/wearable/build
+CMAKE_BINARY_DIR = /home/student/wearable_robot_control/build
 
 # Utility rule file for std_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ mindrove_package/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build: std_msg
 .PHONY : mindrove_package/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
 
 mindrove_package/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/pal/wearable/build/mindrove_package && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/student/wearable_robot_control/build/mindrove_package && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : mindrove_package/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 
 mindrove_package/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/pal/wearable/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pal/wearable/src /home/pal/wearable/src/mindrove_package /home/pal/wearable/build /home/pal/wearable/build/mindrove_package /home/pal/wearable/build/mindrove_package/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/student/wearable_robot_control/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/student/wearable_robot_control/src /home/student/wearable_robot_control/src/mindrove_package /home/student/wearable_robot_control/build /home/student/wearable_robot_control/build/mindrove_package /home/student/wearable_robot_control/build/mindrove_package/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : mindrove_package/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
 

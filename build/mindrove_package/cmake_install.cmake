@@ -1,8 +1,8 @@
-# Install script for directory: /home/pal/wearable/src/mindrove_package
+# Install script for directory: /home/student/wearable_robot_control/src/mindrove_package
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/pal/wearable/install")
+  set(CMAKE_INSTALL_PREFIX "/home/student/wearable_robot_control/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,65 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/pal/wearable/build/mindrove_package/catkin_generated/installspace/mindrove_package.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mindrove_package/msg" TYPE FILE FILES "/home/student/wearable_robot_control/src/mindrove_package/msg/MindRoveData.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mindrove_package/cmake" TYPE FILE FILES "/home/student/wearable_robot_control/build/mindrove_package/catkin_generated/installspace/mindrove_package-msg-paths.cmake")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/student/wearable_robot_control/devel/include/mindrove_package")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/student/wearable_robot_control/devel/share/roseus/ros/mindrove_package")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/student/wearable_robot_control/devel/share/common-lisp/ros/mindrove_package")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/student/wearable_robot_control/devel/share/gennodejs/ros/mindrove_package")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/student/wearable_robot_control/devel/lib/python3/dist-packages/mindrove_package")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/student/wearable_robot_control/devel/lib/python3/dist-packages/mindrove_package")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/student/wearable_robot_control/build/mindrove_package/catkin_generated/installspace/mindrove_package.pc")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mindrove_package/cmake" TYPE FILE FILES "/home/student/wearable_robot_control/build/mindrove_package/catkin_generated/installspace/mindrove_package-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mindrove_package/cmake" TYPE FILE FILES
-    "/home/pal/wearable/build/mindrove_package/catkin_generated/installspace/mindrove_packageConfig.cmake"
-    "/home/pal/wearable/build/mindrove_package/catkin_generated/installspace/mindrove_packageConfig-version.cmake"
+    "/home/student/wearable_robot_control/build/mindrove_package/catkin_generated/installspace/mindrove_packageConfig.cmake"
+    "/home/student/wearable_robot_control/build/mindrove_package/catkin_generated/installspace/mindrove_packageConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mindrove_package" TYPE FILE FILES "/home/pal/wearable/src/mindrove_package/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mindrove_package" TYPE FILE FILES "/home/student/wearable_robot_control/src/mindrove_package/package.xml")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/mindrove_package" TYPE PROGRAM FILES "/home/student/wearable_robot_control/build/mindrove_package/catkin_generated/installspace/mindrove_publisher.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/mindrove_package" TYPE PROGRAM FILES "/home/student/wearable_robot_control/build/mindrove_package/catkin_generated/installspace/classifier.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/mindrove_package" TYPE PROGRAM FILES "/home/student/wearable_robot_control/build/mindrove_package/catkin_generated/installspace/command_center.py")
 endif()
 

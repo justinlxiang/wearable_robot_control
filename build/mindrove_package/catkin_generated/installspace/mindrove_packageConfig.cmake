@@ -67,14 +67,14 @@ set(mindrove_package_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(mindrove_package_SOURCE_PREFIX /home/pal/wearable/src/mindrove_package)
-  set(mindrove_package_DEVEL_PREFIX /home/pal/wearable/devel)
+  set(mindrove_package_SOURCE_PREFIX /home/student/wearable_robot_control/src/mindrove_package)
+  set(mindrove_package_DEVEL_PREFIX /home/student/wearable_robot_control/devel)
   set(mindrove_package_INSTALL_PREFIX "")
   set(mindrove_package_PREFIX ${mindrove_package_DEVEL_PREFIX})
 else()
   set(mindrove_package_SOURCE_PREFIX "")
   set(mindrove_package_DEVEL_PREFIX "")
-  set(mindrove_package_INSTALL_PREFIX /home/pal/wearable/install)
+  set(mindrove_package_INSTALL_PREFIX /home/student/wearable_robot_control/install)
   set(mindrove_package_PREFIX ${mindrove_package_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(mindrove_package_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "include " STREQUAL " ")
   set(mindrove_package_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/pal/wearable/install/lib;/opt/pal/gallium/lib;/opt/ros/noetic/lib)
+    foreach(path /home/student/wearable_robot_control/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -177,7 +177,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(mindrove_package_EXPORTED_TARGETS "")
+set(mindrove_package_EXPORTED_TARGETS "mindrove_package_generate_messages_cpp;mindrove_package_generate_messages_eus;mindrove_package_generate_messages_lisp;mindrove_package_generate_messages_nodejs;mindrove_package_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${mindrove_package_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -185,7 +185,7 @@ foreach(t ${mindrove_package_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "")
+set(depends "message_runtime")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -214,7 +214,7 @@ foreach(depend ${depends})
   _list_append_deduplicate(mindrove_package_EXPORTED_TARGETS ${${mindrove_package_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "mindrove_package-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${mindrove_package_DIR}/${extra})
