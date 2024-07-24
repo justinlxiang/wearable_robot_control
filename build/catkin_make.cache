@@ -1,2 +1,0 @@
-mindrove_package
--DCATKIN_DEVEL_PREFIX=/home/student/wearable_robot_control/devel -DCMAKE_INSTALL_PREFIX=/home/student/wearable_robot_control/install -G Unix Makefiles

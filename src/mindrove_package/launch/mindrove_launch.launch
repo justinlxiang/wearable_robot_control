@@ -1,25 +1,27 @@
 <launch>
-    <!-- Launch MindRove Publisher Node -->
-    <node
-        name="mindrove_publisher"
-        pkg="mindrove_package"
-        type="mindrove_publisher.py"
-        output="screen"
-        />
+  <!-- Launch MindRove Publisher Node -->
+  <node
+    name="mindrove_publisher"
+    pkg="mindrove_package"
+    type="mindrove_publisher.py"
+    output="screen"
+  />
 
-    <!-- Launch Classifier Node -->
-    <node
-        name="classifier_node"
-        pkg="mindrove_package"
-        type="classifier_node.py"
-        output="screen"
-        />
+  <!-- Launch Classifier Node -->
+  <node
+    name="classifier_node"
+    pkg="mindrove_package"
+    type="classifier.py"
+    output="screen"
+  >
+    <param name="model_path" value="$(find mindrove_package)/models/random_forest_model.pkl"></param>
+    <param name="trigger_model_path" value="$(find mindrove_package)/models/trigger_model.pkl"></param>
+  </node>
 
-    <!-- Launch Command Center Node -->
-    <node
-        name="command_center"
-        pkg="mindrove_package"
-        type="command_center.py"
-        output="screen"
-        />
+  <!-- Launch Command Center Node -->
+  <node
+    name="command_center"
+    pkg="mindrove_package"
+    type="command_center.py"
+    output="screen" />
 </launch>
