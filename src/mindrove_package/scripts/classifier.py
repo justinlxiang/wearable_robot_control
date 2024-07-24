@@ -15,6 +15,7 @@ def classify_data(input):
 def detect_trigger(input):
     outputs = ['yes', 'no']
     classification = outputs[int(trigger_model.predict([input])[0])]
+    return classification
 
 def callback(msg):
     if publish:
