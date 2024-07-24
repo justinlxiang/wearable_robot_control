@@ -56,7 +56,7 @@ def listener():
 
     # Load the Random Forest model
     global model, trigger_model
-    model = joblib.load('models/Random_Forest_model.pkl')
+    model = joblib.load('models/random_forest_model.pkl')
     trigger_model = joblib.load('models/trigger_model.pkl')
 
     global publish, publish_counter
