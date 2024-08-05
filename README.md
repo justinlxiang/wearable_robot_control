@@ -4,6 +4,13 @@
 
 This is a ROS1 package designed to interface with the MindRove Armband. The package processes data from the armband's 8 EMG channels and 6 IMU channels (Gyroscope and Accelerometer) to detect a double_squeeze trigger and perform gesture classification. Based on the detected gestures, the package can execute various robot commands, which can be customized in the `command_center.py` script.
 
+## Requirements
+
+The required dependencies for this package are listed in the `requirements.txt` file. To install them, you can use the following command:
+```bash
+pip install -r requirements.txt
+
+
 ## Features
 
 - **Double Squeeze Trigger**: The package can detect a double squeeze gesture to activate the command listening mode. This allows the system to start listening for subsequent gesture commands to execute.
