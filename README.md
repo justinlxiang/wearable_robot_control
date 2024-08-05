@@ -9,6 +9,7 @@ This is a ROS1 package designed to interface with the MindRove Armband. The pack
 The required dependencies for this package are listed in the `requirements.txt` file. To install them, you can use the following command:
 ```bash
 pip install -r requirements.txt
+```
 
 
 ## Features
